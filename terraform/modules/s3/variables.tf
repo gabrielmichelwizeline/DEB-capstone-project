@@ -1,4 +1,7 @@
-variable "bucket_prefix" {
+variable "raw_bucket_prefix" {
+  type = string
+}
+variable "staging_bucket_prefix" {
   type = string
 }
 

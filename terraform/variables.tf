@@ -95,10 +95,16 @@ variable "number_of_instances" {
 
 
 ### S3 ###
-variable "bucket_prefix" {
+variable "raw_bucket_prefix" {
   description = "A prefix will be added to a random name"
   type        = string
 }
+
+variable "staging_bucket_prefix" {
+  description = "A prefix will be added to a random name"
+  type        = string
+}
+
 
 variable "acl" {
   description = "Access Control List"
