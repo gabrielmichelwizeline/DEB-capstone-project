@@ -54,4 +54,6 @@ env:
     value: "SLACK_WEBHOOK_TOKEN"
   - name: "SLACK_CHANNEL"
     value: "#dataengbootcamp-wizeliners"
+  - name: "S3_SENSOR_DAG_NAME"
+    value: "s3_sensor_postgres_pipeline"
 
