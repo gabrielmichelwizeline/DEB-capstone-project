@@ -1,0 +1,36 @@
+dags:
+  gitSync:
+    branch: master
+    depth: 1
+    enabled: true
+    maxFailures: 0
+    repo: https://github.com/gabrielmichelwizeline/DEB-capstone-project-dags.git
+    rev: HEAD
+    subPath: dags
+  persistence:
+    accessMode: ReadWriteMany
+    enabled: true
+    size: 1Gi
+    storageClassName: nfs-client
+env:
+- name: NEW_FILES_PREFIX
+  value: new/
+- name: PROCESSED_FILES_PREFIX
+  value: processed/
+- name: BUCKET_NAME
+  value: load-user-purchases-bucket
+- name: POSTGRES_TABLE
+  value: user_purchase
+- name: POSTGRES_SCHEMA
+  value: bootcampdb
+- name: SLACK_HTTP_CONNECTION_ID
+  value: slack_connection
+- name: SLACK_WEBHOOK_TOKEN
+  value: SLACK_WEBHOOK_TOKEN
+- name: SLACK_CHANNEL
+  value: '#dataengbootcamp-wizeliners'
+logs:
+  persistence:
+    enabled: true
+    size: 1Gi
+    storageClassName: nfs-client

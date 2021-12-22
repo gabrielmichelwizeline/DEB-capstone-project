@@ -39,3 +39,5 @@ terraform.rc
 
 #kubeconfigfile
 kubeconfig*
+
+override.yaml
